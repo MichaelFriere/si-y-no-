@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./yes_style.css">
+    <style>
+        .button_container {
+            display: flex;
+            justify-content: center; /* Centra los botones horizontalmente */
+            margin-top: 20px; /* Espacio superior para los botones */
+        }
+
+        button {
+            background-color: pink; /* Color de fondo rosado */
+            border: none; /* Sin borde */
+            color: white; /* Color del texto */
+            padding: 10px 20px; /* Espaciado interno del botón */
+            font-size: 16px; /* Tamaño de fuente */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s; /* Efecto de transición */
+            margin: 0 10px; /* Espacio entre botones */
+        }
+
+        button:hover {
+            background-color: #ff69b4; /* Color más oscuro al pasar el mouse */
+        }
+
+        .text_small {
+            text-align: center; /* Centra el texto */
+            margin-top: 10px; /* Espacio superior para el texto */
+            font-size: 14px; /* Tamaño de fuente del texto pequeño */
+            color: #555; /* Color del texto pequeño */
+        }
+
+        .final_button_container {
+            display: flex;
+            justify-content: center; /* Centra el botón final horizontalmente */
+            margin-top: 20px; /* Espacio superior para el botón final */
+        }
+
+        .video_container {
+            display: none; /* Oculta el video inicialmente */
+            justify-content: center; /* Centra el video horizontalmente */
+            margin-top: 20px; /* Espacio superior para el video */
+        }
+    </style>
+    <script>
+        function showVideo(videoId) {
+            var videos = document.querySelectorAll('.video_container');
+            videos.forEach(function(video) {
+                video.style.display = 'none'; /* Oculta todos los videos */
+            });
+            document.getElementById(videoId).style.display = 'flex'; /* Muestra el video seleccionado */
+        }
+    </script>
+</head> 
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">SIIIIII, eres mi vida entera quiero que sepas que a tu lado todo es mas bonito!!</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://i.pinimg.com/originals/6f/ce/4f/6fce4f895397ba41203b413eff279882.gif" alt="Cute animated illustration">
+        </div>
+        <div class="button_container">
+            <button onclick="showVideo('video1');">❤️</button>
+            <button onclick="showVideo('video2');">💙</button>
+            <button onclick="showVideo('video3');">❤</button>
+        </div>
+        <div class="text_small">
+            <p>Te dedico esta hermosa canción que es como me haces sentir, lo maravilloso que me haces sentir.</p>
+        </div>
+        <div class="final_button_container">
+            <button onclick="showVideo('video4');">Until I found you</button>
+        </div>
+
+        <!-- Videos locales -->
+        <div id="video1" class="video_container">
+            <video controls width="600">
+                <source src="video 1.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+        <div id="video2" class="video_container">
+            <video controls width="600">
+                <source src="video 2.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+        <div id="video3" class="video_container">
+            <video controls width="600">
+                <source src="video 3.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+        <div id="video4" class="video_container">
+            <video controls width="600">
+                <source src="cancion st.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+    </div>
+</body> 
+</html>
